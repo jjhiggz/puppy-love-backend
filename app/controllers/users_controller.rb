@@ -5,7 +5,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = Dog.find(params[:id])
+
+    @user = User.find(params[:id])
     render json: @user, include: :dogs
   end
 

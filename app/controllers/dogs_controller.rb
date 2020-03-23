@@ -6,7 +6,7 @@ class DogsController < ApplicationController
 
   def show
       @dog = Dog.find(params[:id])
-      render json: dog, include: :user
+      render json: @dog, include: :user
   end
 
   def update
